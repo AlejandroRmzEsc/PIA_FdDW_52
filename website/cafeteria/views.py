@@ -10,3 +10,6 @@ def unete(request):
 
 def conocenos(request):
     return render(request, 'conocenos.html')
+
+def menu(request):
+    return render(request, 'menu.html')
