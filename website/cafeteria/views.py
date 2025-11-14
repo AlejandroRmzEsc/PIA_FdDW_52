@@ -7,3 +7,6 @@ def index (request):
 
 def unete(request):
     return render(request, 'unete.html')
+
+def conocenos(request):
+    return render(request, 'conocenos.html')
