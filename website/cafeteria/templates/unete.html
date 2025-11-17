@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteria</title>
+    {% include 'referencias.html' %}
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h1 class="text-center mt-3">UNETE A NUESTRO EQUIPO</h1>
+    <div class="container border border-black rounded-2 p-4 mt-5 shadow">
+        <div class="row">
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu Nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Telefono</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu numero">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email de contacto">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row items-center">
+            <div class="col-12">
+                <button class="btn btn-primary position-relative" type="submit">Submit form</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
