@@ -4,40 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafeteria</title>
-    {% include 'referencias.html' %}
+    <title>Únete a nuestro equipo - Pedacito de cielo</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
+
     {% include 'navbar.html' %}
-    <h1 class="text-center mt-3">UNETE A NUESTRO EQUIPO</h1>
-    <div class="container border border-black rounded-2 p-4 mt-5 shadow">
-        <div class="row">
-            <div class="col-6">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu Nombre">
+
+    <section class="join-header">
+        <h1>Únete a nuestro equipo</h1>
+        <p>
+            ¿Te gustaría trabajar en un ambiente cálido, con buen café y buena vibra?  
+            Déjanos tus datos y nos pondremos en contacto contigo.
+        </p>
+    </section>
+
+    <section class="join-section">
+        <form class="join-form" method="post">
+            {% csrf_token %}
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
                 </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Telefono</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu numero">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email de contacto">
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej. 81 1234 5678">
                 </div>
             </div>
-            <div class="col-6">
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@correo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="puesto">Puesto de interés</label>
+                    <select id="puesto" name="puesto">
+                        <option value="">Selecciona una opción</option>
+                        <option value="barista">Barista</option>
+                        <option value="caja">Cajero(a)</option>
+                        <option value="mesero">Mesero(a)</option>
+                        <option value="cocina">Cocina / Repostería</option>
+                    </select>
                 </div>
             </div>
-        </div>
-        <div class="row items-center">
-            <div class="col-12">
-                <button class="btn btn-primary position-relative" type="submit">Submit form</button>
+
+            <div class="form-row form-row-full">
+                <div class="form-group">
+                    <label for="mensaje">Cuéntanos sobre ti</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Experiencia, disponibilidad, por qué te gustaría trabajar con nosotros"></textarea>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Enviar solicitud</button>
+            </div>
+        </form>
+    </section>
+
+    {% include 'footer.html' %}
+
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

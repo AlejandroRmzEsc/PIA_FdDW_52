@@ -1,13 +1,30 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    {% include 'referencias.html'%}
-</head>
-<body>
-    
-</body>
-</html>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>Pedacito de cielo</h3>
+            <p>
+                Cafetería con ambiente acogedor, perfecta para disfrutar un café,
+                un postre y buena compañía.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Horario</h4>
+            <p>Lunes a Viernes: 8:00 am – 9:00 pm</p>
+            <p>Sábado y Domingo: 9:00 am – 10:00 pm</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Contacto</h4>
+            <p>Tel: 81-0000-0000</p>
+            <p>Email: pedacitodecielo@cafeteria.com</p>
+            <p>Dirección: Calle Café #123, Monterrey, N.L.</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; {{ now|date:"Y" }} Pedacito de cielo. Todos los derechos reservados.</p>
+    </div>
+</footer>

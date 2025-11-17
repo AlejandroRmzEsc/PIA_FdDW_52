@@ -4,134 +4,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    {% include 'referencias.html' %}
+    <title>Menú - Pedacito de cielo</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
+
     {% include 'navbar.html' %}
 
-    <h2>Promociones Especiales de Temporada</h2>
+    <!-- PROMOCIONES DE TEMPORADA -->
+    <section class="menu-section">
+        <h2>Promociones especiales de temporada</h2>
+        <p class="menu-subtitle">
+            Bebidas de edición limitada y combos pensados para antojos con sabor mexicano.
+        </p>
 
-    <div class="container">
-        <div class="row m-5">
+        <div class="promo-grid">
+            <article class="promo-card">
+                <img src="{% static 'img/menu1.jpg' %}" alt="Latte de pan de muerto">
+                <h3>Cafe americano</h3>
+                <p>Latte con notas de azahar y canela, acompañado de una rebanada de pan de muerto.</p>
+                <p class="price">Combo: $95 MXN</p>
+            </article>
 
-            <div class="col-3 m-5">
-                <div class="card shadow" style="width: 18rem;">
-                <img src="{% static 'img/menu1.jpg' %}" class="card-img-top" alt="promo1">
-                    <div class="card-body">
-                        <p class="card-text">Promo random</p>
-                    </div>
-                </div>
+            <article class="promo-card">
+                <img src="{% static 'img/menu2.jpg' %}" alt="Chocolate abuelita con pan dulce">
+                <h3>Chocolate Abuelita + Pan Dulce</h3>
+                <p>Vaso de chocolate caliente estilo casero con pieza de concha o oreja.</p>
+                <p class="price">Combo: $85 MXN</p>
+            </article>
+
+            <article class="promo-card">
+                <img src="{% static 'img/menu3.jpg' %}" alt="Frappe de mazapán">
+                <h3>Frappe de Mazapán</h3>
+                <p>Café frappe con mazapán de cacahuate, crema batida y topping de mazapán.</p>
+                <p class="price">Vaso grande: $82 MXN</p>
+            </article>
+
+            <article class="promo-card">
+                <img src="{% static 'img/menu4.jpg' %}" alt="Capuchino de cajeta">
+                <h3>Cheesecake</h3>
+                <p>Espresso con leche vaporizada y jarabe de cajeta, decorado con caramelo.</p>
+                <p class="price">Taza mediana: $65 MXN</p>
+            </article>
+
+            <article class="promo-card">
+                <img src="{% static 'img/menu5.jpg' %}" alt="Latte horchata">
+                <h3>Brownie Magico</h3>
+                <p>Latte frío con mezcla de horchata de arroz, canela y toque de café.</p>
+                <p class="price">Vaso grande: $78 MXN</p>
+            </article>
+
+            <article class="promo-card">
+                <img src="{% static 'img/menu6.jpg' %}" alt="Combo café y rebanada de pay">
+                <h3>Café + Rebanada de Pay</h3>
+                <p>Café americano o latte chico con rebanada de pay (limón o queso).</p>
+                <p class="price">Combo: $89 MXN</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- MENÚ GENERAL -->
+    <section class="menu-section">
+        <h2>Nuestro Menú</h2>
+        <p class="menu-subtitle">
+            Cafés, bebidas frías y postres preparados con amor y un Pedacito de Cielo.
+        </p>
+
+        <!-- BEBIDAS -->
+        <div class="menu-columns">
+
+            <div class="menu-column">
+                <h3>Bebidas Calientes</h3>
+                <ul class="menu-list">
+                    <li>
+                        <div>
+                            <strong>Café Americano</strong>
+                            <p>Clásico y suave, espresso con agua caliente.</p>
+                        </div>
+                        <span class="menu-price">$38 chico · $45 mediano</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Cappuccino</strong>
+                            <p>Espresso con leche vaporizada y espuma cremosa.</p>
+                        </div>
+                        <span class="menu-price">$52 chico · $60 mediano</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Latte</strong>
+                            <p>Espresso con leche cremosa. Sabores: vainilla, caramelo, avellana.</p>
+                        </div>
+                        <span class="menu-price">$55 chico · $65 mediano</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Mocha</strong>
+                            <p>Café con chocolate semiamargo y leche vaporizada.</p>
+                        </div>
+                        <span class="menu-price">$58 chico · $68 mediano</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Chocolate Caliente</strong>
+                            <p>Estilo mexicano con canela (agua o leche).</p>
+                        </div>
+                        <span class="menu-price">$50 chico · $58 mediano</span>
+                    </li>
+                </ul>
             </div>
 
-            <div class="col-3 m-5">
-                <div class="card shadow" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="promo2">
-                    <div class="card-body">
-                        <p class="card-text">Promo random</p>
-                    </div>
-                </div>
+            <div class="menu-column">
+                <h3>Bebidas Frías</h3>
+                <ul class="menu-list">
+                    <li>
+                        <div>
+                            <strong>Cold Brew</strong>
+                            <p>Café de extracción en frío, intenso y refrescante.</p>
+                        </div>
+                        <span class="menu-price">$55 vaso</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Frappe de Café</strong>
+                            <p>Con crema batida. Sabores: vainilla, caramelo, moka.</p>
+                        </div>
+                        <span class="menu-price">$68 chico · $78 grande</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Frappe de Mazapán</strong>
+                            <p>Con mazapán de cacahuate, crema batida y topping.</p>
+                        </div>
+                        <span class="menu-price">$75 chico · $85 grande</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Limonada Mineral</strong>
+                            <p>Natural o de frutos rojos.</p>
+                        </div>
+                        <span class="menu-price">$45 vaso</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Té Helado</strong>
+                            <p>Durazno, limón o frutos rojos.</p>
+                        </div>
+                        <span class="menu-price">$42 vaso</span>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </section>
 
-            <div class="col-3 m-5">
-                <div class="card shadow" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="promo3">
-                    <div class="card-body">
-                        <p class="card-text">Promo random</p>
-                    </div>
-                </div>
-            </div>
+    <!-- POSTRES -->
+    <section class="menu-section">
+        <h2>Postres</h2>
+        <p class="menu-subtitle">
+            El acompañante perfecto para tu bebida favorita.
+        </p>
 
-            <div class="col-3 m-5">
-                <div class="card shadow" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="promo4">
-                    <div class="card-body">
-                        <p class="card-text">Promo random</p>
-                    </div>
-                </div>
-            </div>
+        <div class="menu-cards">
+            <article class="dessert-card">
+                <img src="{% static 'img/postre1.jpg' %}" alt="Cheesecake">
+                <h3>Cheesecake</h3>
+                <p>Rebanada cremosa con base de galleta. Sabores: fresa, frutos rojos, caramelo.</p>
+                <p class="price">$68 MXN por rebanada</p>
+            </article>
 
-            <div class="col-3 m-5">
-                <div class="card shadow" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="promo5">
-                    <div class="card-body">
-                        <p class="card-text">Promo random</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3 m-5">
-                <div class="card shadow" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="promo6">
-                    <div class="card-body">
-                        <p class="card-text">Promo random</p>
-                    </div>
-                </div>
-            </div>
+            <article class="dessert-card">
+                <img src="{% static 'img/postre2.jpg' %}" alt="Brownie">
+                <h3>Brownie</h3>
+                <p>Pastelito de chocolate suave, ligeramente húmedo. Opcional con nieve de vainilla.</p>
+                <p class="price">$55 MXN solo · $68 MXN con nieve</p>
+            </article>
 
         </div>
-    </div>
+    </section>
 
+    {% include 'footer.html' %}
 
-    <h1>Nuestro Menu</h1>
-    <p>Cafés y postres preparados con amor y un Pedacito de Cielo</p>
-
-    <div style="text-align: center;">
-
-        <!-- los bordes los pongo mientras pero los planeaba quitar -->
-        <!-- las imagenes ya estan en la carpeta -->
-        <style>
-            table {
-                border-collapse: collapse;
-                margin: 20px auto;
-            }
-
-            th, td {
-                border: 1px solid black;
-                padding: 8px;
-            }
-        </style>
-
-        <table border="1">
-            <tr>
-                <th>Bebidas</th>
-                
-            </tr>
-            <tr>
-                <td>Café Americano – Clásico y suave, solo espresso con agua caliente.</td>
-                <td>*imagen*</td>
-            </tr>
-            <tr>
-                <td>Cappuccino – Espresso con leche vaporizada y una capa de espuma.</td>
-                <td>*imagen*</td>
-            </tr>
-            <tr>
-                <td>Latte – Espresso con mucha leche vaporizada, más cremoso y ligero.</td>
-                <td>*imagen*</td>
-            </tr>
-        </table>
-    </div>
-
-    <div style="text-align: center;">
-        <table border="1" >
-            <tr>
-                <th>Postres</th>
-                
-            </tr>
-            <tr>
-                <td>Cheesecake – Rebanada cremosa con base de galleta.</td>
-                <td>*imagen*</td>
-            </tr>
-            <tr>
-                <td>Brownie – Pastelito de chocolate suave y ligeramente húmedo.</td>
-                <td>*imagen*</td>
-            </tr>
-            <tr>
-                <td>Pay de manzana – Rebanada de manzana con canela y masa doradita.</td>
-                <td>*imagen*</td>
-            </tr>
-        </table>
-    </div>
-
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
